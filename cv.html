@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Muhammad Azharuddiya Syam Ramadhan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+         :root {
+            --primary: #001fe7;
+            --dark: #0f172a;
+            --text: #475569;
+        }
+        
+        body {
+            background: #e2e8f0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 40px 0;
+            overflow-x: hidden;
+        }
+        
+        .cv-container {
+            background: white;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            /* Animasi Slide Up CV */
+            animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        
+        @keyframes slideUpFade {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            color: var(--dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 24px;
+            margin: 0;
+        }
+        
+        .header p {
+            color: var(--primary);
+            font-weight: 600;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        
+        .contact-info div {
+            font-size: 12px;
+            margin-bottom: 5px;
+            color: var(--text);
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dark);
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            margin-top: 25px;
+            text-transform: uppercase;
+        }
+        
+        .item {
+            margin-bottom: 15px;
+        }
+        
+        .item h3 {
+            font-size: 14px;
+            color: var(--dark);
+            margin: 0;
+            font-weight: 700;
+        }
+        
+        .item span {
+            font-size: 12px;
+            color: #888;
+            font-weight: 500;
+        }
+        
+        .item p {
+            font-size: 13px;
+            color: var(--text);
+            line-height: 1.5;
+            margin-top: 5px;
+            text-align: justify;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .skill-cat {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        .skill-list {
+            font-size: 13px;
+            color: var(--text);
+        }
+        
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(88, 54, 255, 0.4);
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: inherit;
+            opacity: 0;
+            animation: fadeIn 1s ease 0.8s forwards;
+        }
+        
+        .print-btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        .back-btn {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: var(--dark);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            opacity: 0;
+            animation: fadeIn 1s ease 0.8s forwards;
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-3px);
+            background: #1e293b;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                width: 100%;
+                margin: 0;
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+            .print-btn,
+            .back-btn {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Kembali
+    </a>
+
+    <button onclick="window.print()" class="print-btn">
+        <i class="fas fa-download"></i> Simpan PDF
+    </button>
+
+    <div class="cv-container">
+        <header class="header">
+            <div>
+                <h1>Muhammad Azharuddiya Syam Ramadhan</h1>
+                <p>WEB DEVELOPER & MULTIMEDIA</p>
+            </div>
+            <div class="contact-info">
+                <div>Tasikmalaya, Jawa Barat</div>
+                <div>247006111168@student.unsil.ac.id</div>
+                <div>+62 878-0463-3999</div>
+            </div>
+        </header>
+
+        <h2 class="section-title">Profil</h2>
+        <p class="item">Mahasiswa Informatika Universitas Siliwangi dengan minat pada pengembangan web dan konten multimedia. Memiliki kemampuan teknis dalam HTML, CSS, JavaScript, serta kreativitas dalam video editing dan desain grafis.</p>
+
+        <h2 class="section-title">Pendidikan</h2>
+        <div class="item">
+            <h3>Universitas Siliwangi</h3>
+            <span>S1 Informatika | 2024 - Sekarang</span>
+        </div>
+
+        <h2 class="section-title">Keahlian</h2>
+        <div class="skills-grid">
+            <div class="item">
+                <div class="skill-cat">Web Development</div>
+                <div class="skill-list">HTML5, CSS3, JavaScript, Bootstrap</div>
+            </div>
+            <div class="item">
+                <div class="skill-cat">Multimedia</div>
+                <div class="skill-list">Adobe Premiere, Photoshop, Video Editing</div>
+            </div>
+            <div class="item">
+                <div class="skill-cat">Programming</div>
+                <div class="skill-list">Python, SQL, Java, PHP</div>
+            </div>
+            <div class="item">
+                <div class="skill-cat">Tools</div>
+                <div class="skill-list">Git, VS Code, Figma, OBS</div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Projek</h2>
+        <div class="item">
+            <h3>Descrypt Store</h3>
+            <p>Platform E-Commerce dengan fitur katalog dinamis.</p>
+        </div>
+        <div class="item">
+            <h3>US Tax Calculator</h3>
+            <p>Aplikasi web penghitung pajak real-time.</p>
+        </div>
+        <div class="item">
+            <h3>Linux KreasiOS</h3>
+            <p>Distro Linux custom untuk kreator multimedia.</p>
+        </div>
+        <div class="item">
+            <h3>Web Kalkulus</h3>
+            <p>Platform pembelajaran matematika digital dengan elemen multimedia interaktif</p>
+        </div>
+    </div>
+</body>
+
+</html>
