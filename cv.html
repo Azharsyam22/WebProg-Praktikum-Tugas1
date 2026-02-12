@@ -23,21 +23,17 @@
             margin: 0;
             overflow-x: hidden;
         }
-        /* --- TAMPILAN DESKTOP (TETAP SEPERTI ASLINYA) --- */
         
         .cv-container {
             background: white;
             width: 210mm;
-            /* Ukuran A4 Tetap */
             min-height: 297mm;
             padding: 40px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            /* Animasi Slide Up CV */
             animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
             opacity: 0;
             transform: translateY(40px);
             box-sizing: border-box;
-            /* Penting agar padding tidak bikin lebar berlebih */
         }
         
         @keyframes slideUpFade {
@@ -73,7 +69,6 @@
         
         .contact-info {
             text-align: right;
-            /* Default Desktop Rata Kanan */
         }
         
         .contact-info div {
@@ -193,29 +188,20 @@
                 opacity: 1;
             }
         }
-        /* ==================================================================
-           PENAMBAHAN KHUSUS MOBILE (AGAR TIDAK TERPOTONG)
-           ================================================================== */
         
         @media screen and (max-width: 768px) {
             body {
                 background: #fff;
-                /* Latar belakang putih di HP agar bersih */
                 padding: 0;
             }
             .cv-container {
                 width: 100%;
-                /* Lebar mengikuti layar HP (JANGAN 210mm) */
                 min-height: auto;
-                /* Tinggi menyesuaikan isi */
                 padding: 25px;
-                /* Padding lebih kecil agar muat */
                 box-shadow: none;
-                /* Hilangkan bayangan di HP */
                 margin: 0;
                 border-radius: 0;
             }
-            /* Header: Nama di Atas, Kontak di Bawah */
             .header {
                 flex-direction: column;
                 align-items: flex-start;
@@ -223,23 +209,18 @@
             }
             .header h1 {
                 font-size: 20px;
-                /* Ukuran font nama sedikit dikecilkan agar tidak nabrak */
                 line-height: 1.3;
             }
             .contact-info {
                 text-align: left;
-                /* Kontak jadi rata kiri */
                 width: 100%;
                 padding-top: 10px;
                 border-top: 1px dashed #eee;
-                /* Garis pemisah tipis */
             }
-            /* Skill jadi 1 kolom ke bawah */
             .skills-grid {
                 grid-template-columns: 1fr;
                 gap: 15px;
             }
-            /* Penyesuaian Tombol di HP */
             .print-btn,
             .back-btn {
                 bottom: 20px;
